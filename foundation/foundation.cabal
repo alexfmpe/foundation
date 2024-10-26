@@ -185,9 +185,9 @@ library
                      Foundation.System.Bindings.PosixDef
     other-modules:   Foundation.Foreign.MemoryMap.Posix
                      Foundation.System.Entropy.Unix
-  if os(linux)
+  if os(linux) || os(android)
     exposed-modules: Foundation.System.Bindings.Linux
-  if os(osx)
+  if os(osx) || os(ios)
     exposed-modules: Foundation.System.Bindings.Macos
 
   default-extensions: NoImplicitPrelude
